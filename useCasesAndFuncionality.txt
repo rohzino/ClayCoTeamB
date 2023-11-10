@@ -6,4 +6,4 @@ Read SQL database of historical land records
 
 Search by location, name and date
 
-Someone walks in
+Someone walks in, asks for the historical record of the land. They can be directed to use the website instead of coming in and asking
