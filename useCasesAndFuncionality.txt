@@ -7,3 +7,18 @@ Read SQL database of historical land records
 Search by location, name and date
 
 Someone walks in, asks for the historical record of the land. They can be directed to use the website instead of coming in and asking
+
+Title	Clay County Map
+Primary Actor	Costumer
+Secondary Actor	Database
+Goal	Let Costumer use map to find land deeds they want
+Precondition	Costumer must know name or location
+Minimal Guarantee	
+Success Guarantee	
+Trigger Event	Customer clicks on map
+Primary Pathway	
+Alternate Pathway	
+Exception Pathway	
+Main Sequence	
+Variant Sequence	
+
