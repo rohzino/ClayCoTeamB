@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+
+<!-- Include jQuery -->
+<script src="jquery-3.6.4.min.js"></script>
+
+<!-- Include the AJAX handler file -->
+<?php include('ajaxHandler.php'); ?>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Website Title</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+    <header>
+        <div class="logo"></div>
+        <h1>Clay County Interactable Map</h1>
+    </header>
+
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">Events</a>
+        <a href="#">County History</a>
+        <a href="#">What Do We Offer</a>
+        <a href="#">Gift Shop</a>
+        <a href="#">About Us</a>
+        <a href="#">Contact Us</a>
+        <a href="#">Volunteer</a>
+        <a href="#">Township Map</a>
+    </nav>
+
+  
+    <div class="content">
+       <h2>Interactive Map</h2>
+      <p>This is description text what will tell how to use the site and what it does</p>
+    </div>
+
+  <div id="map-container">
+    <p>this is where the image will go</p>
+      <!-- Image here -->
+  </div>
+
+  <div id="info-area">
+      <div id="info-content">
+          <!-- content later -->
+          <h2>Information Area</h2>
+          <p>Placeholder text. This area will be updated with information.</p>
+      </div>
+  </div>
+
+<form action="" method="post">
+  <div class="text-box-container">
+      <div class="text-box">
+          <h3>Date</h3>
+          <p>Data from the database for Date</p>
+
+          <label for="Date">Date of Land Transfer:</label>
+          <input type="date" id="Date"><br>
+      </div>
+
+      <div class="text-box">
+          <h3>Quarter</h3>
+          <p>Data from the database for Quarter</p>
+
+          <label for="Quarter">Quarter ID:</label>
+          <input type="text" id="Quarter"><br>
+          <!-- What does W2, E2, S2, etc mean?  need it for the description -->
+      </div>
+
+      <div class="text-box">
+          <h3>Section</h3>
+          <p>Data from the database for Section</p>
+
+          <label for="Section">Section Number:</label>
+          <input type="number" id="Section"><br>
+      </div>
+
+      <div class="text-box">
+          <h3>Township</h3>
+          <p>Data from the database for Township</p>
+
+          <label for="Township">Township Number:</label>
+          <input type="number" id="Township"><br>
+          
+      </div>
+
+      <div class="text-box">
+          <h3>Range</h3>
+          <p>Data from the database for Range</p>
+
+          <label for="Range">Range Number:</label>
+          <input type="number" id="Range"><br>
+      </div>
+
+      <div class="text-box">
+          <h3>Grantor Name</h3>
+          <p>Data from the database for Grantor Name</p>
+
+          <label for="GrantorLName">Grantor Last Name:</label>
+          <input type="text" id="GrantorLName"><br>
+          <label for="GrantorFName">Grantor First Name:</label>
+          <input type="text" id="GrantorFName"><br>
+      </div>
+
+      <div class="text-box">
+          <h3>Grantee Name</h3>
+          <p>Data from the database for Grantee Name</p>
+
+          <label for="GranteeLName">Grantee Last Name:</label>
+          <input type="text" id="GranteeLName"><br>
+          <label for="GranteeFName">Grantee First Name:</label>
+          <input type="text" id="GranteeFName"><br>
+      </div>
+
+      <button id="searchButton">Search</button>
+  </div>
+</form>
+
+  <footer>
+      <p>Centered Text at the Top of the Footer</p>
+      <!-- img src="your-logo.png" id="footer-logo" alt="Footer Logo" -->
+  </footer>
+  
+</body>
+
+<script src="search.js"></script>
+
+</html>
