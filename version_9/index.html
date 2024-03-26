@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Website Title</title>
+    <script src="jquery-3.6.4.min.js"></script>
+    <script src="search.js"></script>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+    <header>
+        <div class="logo"></div>
+        <h1>Clay County Interactable Map</h1>
+    </header>
+
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">Events</a>
+        <a href="#">County History</a>
+        <a href="#">What Do We Offer</a>
+        <a href="#">Gift Shop</a>
+        <a href="#">About Us</a>
+        <a href="#">Contact Us</a>
+        <a href="#">Volunteer</a>
+        <a href="#">Township Map</a>
+    </nav>
+
+  
+    <div class="content">
+       <h2>Interactive Map</h2>
+      <p>This is description text what will tell how to use the site and what it does</p>
+    </div>
+
+  <div id="map-container">
+    <p>this is where the image will go</p>
+      <!-- Image here -->
+      <!-- img src="path/to/your/image.jpg" alt="Map Image" -->
+  </div>
+
+  <div id="info-area">
+      <div id="info-content">
+          <!-- content later -->
+          <h2>Information Area</h2>
+          <p>Placeholder text. This area will be updated with information.
+
+            actual info: please do not delete (but feel free to edit) -> N2,S2,E2,W2 mean:  N2, S2, E2, W2, NW, NE, SW, SE.
+
+            The first 4 represent a half of . . . A simple example is S2, this means the south half of the section. (320 acres)
+        
+            The last 4 represent a quarter of . . . A simple example is NE, this means the northeast quarter of the section. (160 acres)
+        
+        However!!!
+
+            A complex example is: W2 N2 NE. This is the east half of the north half of the northeast quarter of the section. (40 acres)
+          </p>
+      </div>
+  </div>
+
+<form id="searchForm" action="ajaxHandler.php" method="post">
+  <div class="text-box-container">
+      <div class="text-box">
+          <h3>Date</h3>
+          <p>Data from the database for Date</p>
+
+          <label for="dateInput">Date of Land Transfer:</label>
+          <input type="date" id="dateInput" data-column="DATE"><br>
+      </div>
+
+      <div class="text-box">
+          <h3>Quarter</h3>
+          <p>Data from the database for Quarter</p>
+
+          <label for="quarterInput">Quarter ID:</label>
+          <input type="text" id="quarterInput"data-column="QTR"><br>
+          <!-- What does W2, E2, S2, etc mean?  need it for the description -->
+      </div>
+
+      <div class="text-box">
+          <h3>Section</h3>
+          <p>Data from the database for Section</p>
+
+          <label for="sectionInput">Section Number:</label>
+          <input type="number" id="sectionInput" data-column="SEC"><br>
+      </div>
+
+      <div class="text-box">
+          <h3>Township</h3>
+          <p>Data from the database for Township</p>
+
+          <label for="townshipInput">Township Number:</label>
+          <input type="number" id="townshipInput" data-column="TSP"><br>
+          
+      </div>
+
+      <div class="text-box">
+          <h3>Range</h3>
+          <p>Data from the database for Range</p>
+
+          <label for="rangeInput">Range Number:</label>
+          <input type="number" id="rangeInput" data-column="RGE"><br>
+      </div>
+
+      <div class="text-box">
+          <h3>Grantor Name</h3>
+          <p>Data from the database for Grantor Name</p>
+
+          <label for="grantor1LNameInput">Grantor 1 Last Name:</label>
+          <input type="text" id="grantor1LNameInput" data-column="Last_Name_Grantor_1"><br>
+          <label for="grantor1FNameInput">Grantor 1 First Name:</label>
+          <input type="text" id="grantor1FNameInput" data-column="First_Name_Grantor_1"><br>
+          <label for="grantor2LNameInput">Grantor 2 Last Name:</label>
+          <input type="text" id="grantor2LNameInput" data-column="Last_Name_Grantor_2"><br>
+          <label for="grantor2FNameInput">Grantor 2 First Name:</label>
+          <input type="text" id="grantor2FNameInput" data-column="First_Name_Grantor_2"><br>
+          <label for="grantor3LNameInput">Grantor 3 Last Name:</label>
+          <input type="text" id="grantor3LNameInput" data-column="Last_Name_Grantor_3"><br>
+          <label for="grantor3FNameInput">Grantor 3 First Name:</label>
+          <input type="text" id="grantor3FNameInput" data-column="First_Name_Grantor_3"><br>
+      </div>
+
+      <div class="text-box">
+          <h3>Grantee Name</h3>
+          <p>Data from the database for Grantee Name</p>
+
+          <label for="grantee1LNameInput">Grantee 1 Last Name:</label>
+          <input type="text" id="grantee1LNameInput" data-column="Last_Name_Grantee_1"><br>
+          <label for="grantee1FNameInput">Grantee 1 First Name:</label>
+          <input type="text" id="grantee1FNameInput" data-column="First_Name_Grantor_1"><br>
+          <label for="grantee2LNameInput">Grantee 2 Last Name:</label>
+          <input type="text" id="grantee2LNameInput" data-column="Last_Name_Grantee_2"><br>
+          <label for="grantee2FNameInput">Grantee 2 First Name:</label>
+          <input type="text" id="grantee2FNameInput" data-column="First_Name_Grantor_2"><br>
+      </div>
+
+      <button id="searchButton" type="submit">Search</button>
+  </div>
+</form>
+
+  <footer>
+      <p>Centered Text at the Top of the Footer</p>
+      <!-- img src="your-logo.png" id="footer-logo" alt="Footer Logo" -->
+  </footer>
+
+<div id="searchResults"></div>
+  
+</body>
+
+</html>
